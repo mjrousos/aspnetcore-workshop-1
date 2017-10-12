@@ -1,4 +1,0 @@
-2017-01-13 01:38:57.500 -08:00 [Information] Application startup complete!
-2017-01-13 01:38:57.562 -08:00 [Fatal] This is a critical message
-2017-01-13 01:38:57.564 -08:00 [Warning] This is a warning message
-2017-01-13 01:38:57.565 -08:00 [Error] This is an error message
