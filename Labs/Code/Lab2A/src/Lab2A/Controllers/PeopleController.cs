@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +16,7 @@ namespace Lab2A.Controllers
 
         public PeopleController(ApplicationDbContext context)
         {
-            _context = context;    
+            _context = context;
         }
 
         // GET: People
@@ -60,7 +60,7 @@ namespace Lab2A.Controllers
             {
                 _context.Add(person);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
             return View(person);
         }
@@ -111,7 +111,7 @@ namespace Lab2A.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
             return View(person);
         }
@@ -142,7 +142,7 @@ namespace Lab2A.Controllers
             var person = await _context.Person.SingleOrDefaultAsync(m => m.ID == id);
             _context.Person.Remove(person);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
 
         private bool PersonExists(int id)
